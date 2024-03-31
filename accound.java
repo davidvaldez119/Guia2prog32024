@@ -1,20 +1,20 @@
 import java.util.UUID;
 public class accound {
-    private Client client;
+    private Clientb client;
     private UUID uuid;
     private Double balance;
 
-    public accound(Client client, UUID uuid, Double balance) {
+    public accound(Clientb client, UUID uuid, Double balance) {
         this.client = client;
         this.uuid = UUID.randomUUID();
         this.balance = balance;
     }
 
-    public Client getClient() {
+    public Clientb getClient() {
         return client;
     }
 
-    public void setClient(Client client) {
+    public void setClient(Clientb client) {
         this.client = client;
     }
 
@@ -43,6 +43,7 @@ public class accound {
     public double Extract(Double imp )	{
         if(getBalance() <=imp) {
             System.out.print("no se puede realizar la operacion");
+            return getBalance();
         }
         return balance=this.balance-imp;
     }
